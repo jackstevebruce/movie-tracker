@@ -11,10 +11,10 @@ app.use(express.static('public'));
 
 //Database connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', // Replace with a more secure user in the future
-    password: process.env.DB_PASSWORD, // Use a .env variable for security
-    database: 'movie_tracker' // The name of your database
+    host: '127.0.0.1',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 connection.connect(err => {

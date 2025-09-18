@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Tracker — Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen">
+
+  <!-- Navbar -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand-link">
+        <span class="brand-icon">
+          <i class="fa-solid fa-film"></i>
+        </span>
+        <span class="brand-text">Movie Tracker</span>
+      </a>
+      <nav>
+        <a href="index.html" class="nav-btn active">Home</a>
+        <a href="watchlist.html" class="nav-btn">Watchlist</a>
+        <a href="watched.html" class="nav-btn">Watched</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Content -->
+  <main>
+    <div class="main-header">
+      <h1>Discover films. Build your list.</h1>
+      <p>Search by title or genre, then add to your Watchlist or mark as Watched.</p>
+    </div>
+
+    <!-- Search -->
+    <div class="search-wrap">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input id="searchInput" type="text" placeholder="Search movies..." class="search-input">
+        <button id="clearSearch" class="clear-btn hidden"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="searchHint" class="search-hint">Try: “space”, “romance”, “adventure”.</div>
+    </div>
+
+    <!-- Results -->
+    <div id="resultsWrap" class="results-wrap">
+      <div id="loadingRow" class="results-grid loading-row hidden">
+        <div class="shimmer-card"></div>
+        <div class="shimmer-card"></div>
+        <div class="shimmer-card"></div>
+        <div class="shimmer-card"></div>
+        <div class="shimmer-card"></div>
+      </div>
+      <div id="resultsGrid" class="results-grid"></div>
+      <div id="emptyState" class="empty-state">Start typing to search for a movie.</div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
